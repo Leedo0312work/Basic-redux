@@ -85,7 +85,7 @@ export const createNewUserRedux = (email, password, username) => {
 export const deleteUserRedux = (id) => {
     return async (dispatch, getState) => {
         try {
-            let res = await axios.post(`http://localhost:8080/users/delele/${id}`)
+            let res = await axios.post(`http://localhost:8080/users/delete/${id}`)
             if (res && res.data.errCode === 0) {
                 dispatch(deleteUsersSuccess())
                 dispatch(fetchAllUsers())
